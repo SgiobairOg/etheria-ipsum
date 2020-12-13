@@ -1,0 +1,12 @@
+{
+    "extends": "strongloop",
+    "env": { "es6": true },
+    "parser": "babel-eslint",
+    "rules": {
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "always",
+            "asyncArrow": "always"
+        }]
+    }
+}
