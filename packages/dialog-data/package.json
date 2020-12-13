@@ -1,8 +1,11 @@
 {
-    "name": "etheria-ipsum-dialog-scraper",
+    "name": "@sgiobairog/etheria-ipsum-dialog-data",
     "version": "0.0.1",
+    "main": "./main.js",
+    "exports": "./main.js",
     "scripts": {
-        "dev": "node index.js"
+        "dev:scraper": "node scraper.js",
+        "dev:stats": "node stats.js"
     },
     "dependencies": {
         "babel-eslint": "^10.1.0",

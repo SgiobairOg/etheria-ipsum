@@ -28,3 +28,33 @@ exports.parseLinesWithDelay = async (reader, handler, delay) => {
     console.log('Closing...');
   });
 };
+
+/**
+ * Processes each line of a file with a given delay
+ * @param {any} reader a readline interface
+ * @param {any} handler a handler to apply to each line
+ */
+exports.parseLines = async (reader, handler) => {
+  console.log('Parse lines');
+  do {
+    reader.nextLine(async (err, line) => {
+      console.log('Next line');
+      try {
+        if (err) {
+          console.log(err);
+          throw err;
+        }
+        handler(line);
+      } catch (err) {
+        console.log(err);
+        throw err;
+      }
+    });
+    console.log(reader.hasNextLine());
+  } while (reader.hasNextLine());
+
+  await reader.close(function (err) {
+    if (err) throw err;
+    console.log('Closing...');
+  });
+};
