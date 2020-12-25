@@ -9,8 +9,8 @@ class DialogIndex extends Object {
     if (!collection[key])
       collection[key] = [];
 
-    if (!collection[key].includes(JSON.stringify(value)))
-      collection[key].push(JSON.stringify(value));
+    if (!collection[key].includes(value))
+      collection[key].push(value);
   }
 };
 
@@ -39,16 +39,18 @@ const convertLineToJson = (line) => {
   const charactersExcludingSpaces = line.trim().replace(/\s/g, '').length;
   const words = line.trim().split(/\s+/).length;
 
-  dialog.lines.push({
+  const lineData = {
     characters,
     charactersExcludingSpaces,
     words,
-    content: JSON.stringify(line),
-  });
+    content: line,
+  };
 
-  dialog.characterLengthIndex.appendOrCreate(characters, line);
+  dialog.lines.push(lineData);
 
-  dialog.wordLengthIndex.appendOrCreate(words, line);
+  dialog.characterLengthIndex.appendOrCreate(characters, lineData);
+
+  dialog.wordLengthIndex.appendOrCreate(words, lineData);
 
   console.log(characters, charactersExcludingSpaces, words);
 
