@@ -5,7 +5,7 @@ const { parseLinesWithDelay } = require('./src/utils/utils');
 
 const DIVIDER = '\n';
 
-let outputStream = fs.createWriteStream('./data/dialog.txt', {flags: 'a'});
+let outputStream = fs.createWriteStream('./data/dialog.txt', {flags: 'w'});
 let browser;
 
 const downloadTranscript = async (url, selector) => {
@@ -17,14 +17,21 @@ const downloadTranscript = async (url, selector) => {
       return elements
         .map(element => element
           .innerHTML
-          .replace(/\n/g, '')
           .replace(/\<.*\>/g, '')
+          .replace(/\n/g, '')
+          .replace(/^.*:/g, '')
           .replace(/\(\(\*\*.+\*\*\)\)/g, '')
           .replace(/&[a-z]+;/g, '')
-          .replace(/\[.+\]/g, '')
-          .replace(/^([\w- ]+: )/g, '')
+          .replace(/\[.*?\]/g, '')
+          .replace(/^[0-9]*\]/g, '')
+          .replace(/^(.{1,2})$/g, '')
+          .replace(/^\-/g, '')
+          .replace(/^\- scene .*$/, '')
+          .replace(/-{1,3}/, '')
           .replace(/See Also: Episode Transcript List/gi, '')
           .replace(/\(Credits Roll\)/gi, '')
+          .replace(/\./, '')
+          .replace(/·/, '')
           .trim())
         .filter(line => line !== '');
     });
@@ -46,5 +53,10 @@ const downloadTranscript = async (url, selector) => {
     }, 5000);
 
     console.log('Closed');
+    process.exit(0);
   });
 })();
+
+process.on('SIGTERM', () => {
+  console.log('Process terminated');
+});
