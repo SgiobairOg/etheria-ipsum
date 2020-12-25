@@ -2,8 +2,22 @@ const fs = require('fs');
 const lineReader = require('line-reader');
 const { parseLinesWithDelay } = require('./src/utils/utils');
 
+class DialogIndex extends Object {
+  appendOrCreate (key, value) {
+    const collection = this;
+
+    if (!collection[key])
+      collection[key] = [];
+
+    if (!collection[key].includes(JSON.stringify(value)))
+      collection[key].push(JSON.stringify(value));
+  }
+};
+
 const dialog = {
   lines: [],
+  characterLengthIndex: new DialogIndex(),
+  wordLengthIndex: new DialogIndex(),
 };
 
 let lineIndex = 0;
@@ -32,6 +46,10 @@ const convertLineToJson = (line) => {
     content: JSON.stringify(line),
   });
 
+  dialog.characterLengthIndex.appendOrCreate(characters, line);
+
+  dialog.wordLengthIndex.appendOrCreate(words, line);
+
   console.log(characters, charactersExcludingSpaces, words);
 
   return;
@@ -42,8 +60,10 @@ const convertLineToJson = (line) => {
     if (err) throw err;
 
     await parseLinesWithDelay(reader, convertLineToJson, 50);
+    console.log('Character length index:', dialog.characterLengthIndex);
+    console.log('Word length index:', dialog.wordLengthIndex);
     console.log('Writing file...');
-    await fs.writeFileSync('./data/dialog.json', JSON.stringify(dialog));
+    fs.writeFileSync('./data/dialog.json', JSON.stringify(dialog));
     console.log('Done.');
   });
 })();
