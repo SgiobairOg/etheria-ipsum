@@ -2,6 +2,8 @@
 
 Lorem Ipsum generator based on the dialog from the TV show She-Ra and the Princesses of Power, and associated tools for building/maintaining the dialog. As this is using the dialog from many of the episodes from the TV series please expect spoilers. If you haven't seen She-Ra, please go watch She-Ra.
 
+>_This is the legacy version of this app built with yarn workspaces, the app is migrating the main branch to a Begin app_
+
 ## Packages
 
 ### Dialog-Scraper
