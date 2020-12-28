@@ -18,7 +18,7 @@ const downloadTranscript = async (url, selector) => {
         .map(element => element
           .innerHTML
           .replace(/\<.*\>/g, '')
-          .replace(/\n/g, '')
+          .replace(/\n/g, ' ')
           .replace(/^.*:/g, '')
           .replace(/\(\(\*\*.+\*\*\)\)/g, '')
           .replace(/&[a-z]+;/g, '')

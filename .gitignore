@@ -2,6 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/node,yarn,vscode,macos,vim
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,yarn,vscode,macos,vim
 
+# Dialog data package
+packages/dialog-data/dist
+
 ### macOS ###
 # General
 .DS_Store
@@ -10,7 +13,6 @@
 
 # Icon must end with two \r
 Icon
-
 
 # Thumbnails
 ._*

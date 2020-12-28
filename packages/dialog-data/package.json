@@ -1,11 +1,13 @@
 {
     "name": "@sgiobairog/etheria-ipsum-dialog-data",
     "version": "0.0.1",
-    "main": "./main.js",
-    "exports": "./main.js",
+    "main": "./dist/main.js",
+    "exports": "./dist/main.js",
     "scripts": {
         "dev:scraper": "node scraper.js",
-        "dev:stats": "node stats.js"
+        "dev:stats": "node stats.js",
+        "build": "parcel build ./main.js",
+        "deploy": "cp ./dist/main.js ./../../src/shared/etheria-ipsum-dialog.js"
     },
     "dependencies": {
         "babel-eslint": "^10.1.0",
@@ -14,6 +16,7 @@
     },
     "devDependencies": {
         "eslint": "^7.15.0",
-        "eslint-config-strongloop": "^2.1.0"
+        "eslint-config-strongloop": "^2.1.0",
+        "parcel-bundler": "^1.12.4"
     }
 }
