@@ -7,15 +7,15 @@ const routeList = ( root ) => {
       },
       "root": {
         "rel": "latest-version",
-        "href": `${root}/`
+        "href": `${root}/dialog`
       },
       "characters": {
         "rel": "latest-version",
-        "href": `${root}/characters/{count}`
+        "href": `${root}/dialog/characters/{count}`
       },
       "words": {
         "rel": "latest-version",
-        "href": `${root}/words/{count}`
+        "href": `${root}/dialog/words/{count}`
       } 
     }
   }

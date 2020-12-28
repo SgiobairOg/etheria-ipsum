@@ -2,6 +2,6 @@
 etheria-ipsum
 
 @http
-get /
-get /words/:count
-get /characters/:count
+get /dialog
+get /dialog/words/:count
+get /dialog/characters/:count

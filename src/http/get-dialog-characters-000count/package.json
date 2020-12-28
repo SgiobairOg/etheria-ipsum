@@ -1,0 +1,6 @@
+{
+  "name": "etheria-ipsum-get-dialog-characters",
+  "dependencies": {
+    "random-item": "^3.1.0"
+  }
+}

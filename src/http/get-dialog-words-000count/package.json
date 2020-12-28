@@ -1,5 +1,5 @@
 {
-  "name": "etheria-ipsum-get-words",
+  "name": "etheria-ipsum-get-dialog-words",
   "dependencies": {
     "random-item": "^3.1.0"
   }
