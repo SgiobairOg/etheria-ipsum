@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Shera';
+  src: 
+    url('./fonts/Shera.woff') format('woff'),
+    url('./fonts/Shera.ttf') format('truetype')
+}

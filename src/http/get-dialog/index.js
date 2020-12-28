@@ -1,6 +1,6 @@
 const { routeList } = require('@architect/shared/route-list')
 
-const ROOT = process.env.ROOT || 'http://localhost:3333'
+const ROOT = process.env.API_ROOT || 'http://localhost:3333'
 
 exports.handler = async function http (req) {
   return {

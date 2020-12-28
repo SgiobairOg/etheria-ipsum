@@ -5,6 +5,10 @@
 # Dialog data package
 packages/dialog-data/dist
 
+# Webpacked Assets
+public/bundle.js
+public/*.ttf
+
 ### macOS ###
 # General
 .DS_Store
