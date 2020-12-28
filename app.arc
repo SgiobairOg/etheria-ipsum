@@ -1,3 +1,3 @@
 @app
-begin-app
+etheria-ipsum
 
