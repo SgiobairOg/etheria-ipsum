@@ -1,8 +1,12 @@
 {
-    "name": "@SgiobairOg/etheria-ipsum",
+    "name": "@sgiobairog/etheria-ipsum",
     "version": "0.0.0",
     "description": "API and Site for Generating Lorem Ispum from She-Ra Dialog",
     "private": "true",
+    "scripts": {
+        "start": "npx sandbox",
+        "test": "cross-env NODE_ENV=testing PORT=6666 tape test/*-test.js ./test/**/*-test.js | tap-spec"
+    },
     "devDependencies": {
         "@architect/sandbox": "^3.3.3",
         "@begin/data": "^1.2.3",
