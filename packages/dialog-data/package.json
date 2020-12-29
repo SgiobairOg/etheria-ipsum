@@ -10,11 +10,11 @@
         "deploy": "cp ./dist/main.js ./../../src/shared/etheria-ipsum-dialog.js"
     },
     "dependencies": {
-        "babel-eslint": "^10.1.0",
-        "line-reader": "^0.4.0",
-        "puppeteer": "^5.5.0"
     },
     "devDependencies": {
+        "babel-eslint": "^10.1.0",
+        "line-reader": "^0.4.0",
+        "puppeteer": "^5.5.0",
         "eslint": "^7.15.0",
         "eslint-config-strongloop": "^2.1.0",
         "parcel-bundler": "^1.12.4"
