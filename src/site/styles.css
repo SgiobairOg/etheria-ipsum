@@ -4,3 +4,8 @@
     url('./fonts/Shera.woff') format('woff'),
     url('./fonts/Shera.ttf') format('truetype')
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

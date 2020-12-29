@@ -7,9 +7,9 @@
 </template>
 
 <script>
-  import Header from './components/Header.vue'
-  import Footer from './components/Footer.vue'
-  import Generator from './components/Generator.vue';
+  const Header = () => import('./components/Header.vue')
+  const Footer = () => import('./components/Footer.vue')
+  const Generator = () => import('./components/Generator.vue')
 
   export default {
     name: 'App',
@@ -20,9 +20,3 @@
     }
   };
 </script>
-
-<style global>
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-</style>

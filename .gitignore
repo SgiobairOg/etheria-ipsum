@@ -7,6 +7,8 @@ packages/dialog-data/dist
 
 # Webpacked Assets
 public/bundle.js
+public/*.bundle.js
+public/*.LICENSE.txt
 public/*.ttf
 
 ### macOS ###

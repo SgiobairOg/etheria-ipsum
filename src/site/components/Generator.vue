@@ -22,7 +22,6 @@
 
 <script>
   import { ref, reactive } from "@vue/composition-api";
-  import axios from "axios";
 
   export default {
     name: 'Generator',
@@ -57,6 +56,7 @@
       }
 
       function retriveDialogData( contentType, count) {
+        const axios = () => import("axios");
         stats.ready = false
         const api = `./dialog/${contentType}/${count}`
 

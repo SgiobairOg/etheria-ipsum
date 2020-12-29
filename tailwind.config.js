@@ -1,6 +1,13 @@
 // Color scheme adapted from http://www.mattshanks.com.au/colour-palette-reference-she-ra-and-the-princesses-of-power/
 
 module.exports = {
+  purge: {
+    enabled: true,
+    content: [
+       './src/site/**/*.vue',
+      './public/**/*.html',
+    ]
+  },
   darkMode: 'media',
   theme: {
     colors: {
