@@ -2,7 +2,7 @@
   <main class="max-w-prose mx-0 md:mx-auto">
     <div class="mx-auto">
       <label class="flex justify-center items-center">
-        <input v-model="count" class="form-input block w-24 text-purple-darkest" placeholder="20">
+        <input v-model="count" type="number" min="1" step="1" class="form-input block w-24 text-purple-darkest" placeholder="20">
         <button @click="getWords" class="block px-4 py-2 border-l-2 text-base dark:text-purple-darkest bg-purple-darker dark:bg-purple dark:border-purple-darkest">Words</button>
         <button @click="getCharacters" class="block px-4 py-2 border-l-2 text-base dark:text-purple-darkest  bg-purple-darker dark:bg-purple dark:border-purple-darkest rounded-md rounded-l-none">Characters</button>
       </label>
@@ -21,14 +21,14 @@
 </template>
 
 <script>
-  import { ref, reactive } from "@vue/composition-api";
+  import { ref, reactive } from "@vue/composition-api"
+  import axios from "axios"
 
   export default {
     name: 'Generator',
     setup() {
       const count = ref(20)
       const dialogContent = ref(undefined)
-      const successMessage = ref('')
       const stats = reactive({
         ready: false,
         words: 0,
@@ -56,7 +56,6 @@
       }
 
       function retriveDialogData( contentType, count) {
-        const axios = () => import("axios");
         stats.ready = false
         const api = `./dialog/${contentType}/${count}`
 
@@ -64,10 +63,10 @@
           .get(api)
           .then(
             ( result ) => {
-              updateStats(result.data.words, result.data.characters, result.data.charactersExcludingSpaces) 
+              updateStats(result.data.words, result.data.characters, result.data.charactersExcludingSpaces)
               updateDialog(result.data.dialog)
-            }, 
-            ( error ) => console.error(error))
+            },
+            ( error ) => { throw new Error(error) })
       }
 
       return {
@@ -78,5 +77,5 @@
         getCharacters
       }
     },
-  };
+  }
 </script>

@@ -1,12 +1,14 @@
 // Color scheme adapted from http://www.mattshanks.com.au/colour-palette-reference-she-ra-and-the-princesses-of-power/
-
-//const tailWindCustomForms = require('@tailwindcss/custom-forms')
+const tailWindCustomForms = require('@tailwindcss/custom-forms')
 
 module.exports = {
-  purge: [
-    './public/**/*.html',
-    './src/**/*.vue'
-  ],
+  purge: {
+    enabled: true,
+    content: [
+       './src/site/**/*.vue',
+      './public/**/*.html',
+    ]
+  },
   darkMode: 'media',
   theme: {
     colors: {
@@ -31,9 +33,10 @@ module.exports = {
     fontFamily: {
       'sans': ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'],
       'title': ['Shera']
+
     }
   },
   plugins: [
-    require('@tailwindcss/forms')
-  ],
+    tailWindCustomForms
+  ]
 }

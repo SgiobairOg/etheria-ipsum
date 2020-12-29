@@ -18,5 +18,5 @@
       Footer,
       Generator
     }
-  };
+  }
 </script>
