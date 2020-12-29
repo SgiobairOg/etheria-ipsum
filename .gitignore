@@ -4,6 +4,7 @@
 
 # Dialog data package
 packages/dialog-data/dist
+packages/dialog-data/data/dialog.*
 
 # Webpacked Assets
 public/bundle.js
