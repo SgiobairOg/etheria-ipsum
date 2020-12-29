@@ -14,14 +14,14 @@
         "lint": "eslint src --ignore-pattern node_modules --fix"
     },
     "dependencies": {
+    },
+    "devDependencies": {
         "@tailwindcss/forms": "^0.2.1",
         "@tailwindcss/postcss7-compat": "^2.0.2",
         "autoprefixer": "^9",
         "postcss": "^7",
         "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-        "axios": "^0.21.1"
-    },
-    "devDependencies": {
+        "axios": "^0.21.1",
         "@architect/sandbox": "^3.3.3",
         "@begin/data": "^1.2.3",
         "@vue/cli-plugin-babel": "^4.5.9",
