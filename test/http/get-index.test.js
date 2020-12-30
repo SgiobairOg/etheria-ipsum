@@ -1,7 +1,7 @@
 let test = require('tape')
 let tiny = require('tiny-json-http')
 let sandbox = require('@architect/sandbox')
-let url = 'http://localhost:6666'
+let url = 'http://localhost:6666/dialog'
 
 /**
  * Sandbox / http test
