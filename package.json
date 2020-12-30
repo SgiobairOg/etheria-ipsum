@@ -13,7 +13,7 @@
         "test:api": "cross-env NODE_ENV=testing PORT=6666 tape test/*.test.js ./test/**/*.test.js | tap-spec",
         "test:unit": "vue-cli-service test:unit",
         "lint": "eslint src --ignore-pattern node_modules --fix",
-        "style": "npx tailwindcss-cli@latest build src/assets/styles/styles.css -o public/styles.css"
+        "style": "cross-env NODE_ENV=production npx tailwindcss-cli@latest build src/assets/styles/styles.css -o public/styles.css"
     },
     "dependencies": {},
     "devDependencies": {
