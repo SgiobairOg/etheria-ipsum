@@ -7,4 +7,11 @@
 
 @tailwind base;
 @tailwind components;
+
+.btn-container {
+  position: absolute;
+  bottom: .5rem;
+  right: .5rem;
+}
+
 @tailwind utilities;
