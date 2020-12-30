@@ -8,6 +8,7 @@ packages/dialog-data/data/dialog.*
 
 # Webpacked Assets
 public/bundle.js
+public/styles.css
 public/*.bundle.js
 public/*.LICENSE.txt
 public/*.ttf

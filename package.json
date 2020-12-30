@@ -7,12 +7,14 @@
         "start": "run-s build api",
         "api": "cross-env NODE_ENV=testing ARC_LOCAL=1 npx sandbox",
         "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
+        "build": "cross-env NODE_ENV=production run-s style vue:build",
+        "vue:build": "vue-cli-service build",
         "test": "run-s test:api test:unit",
         "test:api": "cross-env NODE_ENV=testing PORT=6666 tape test/*.test.js ./test/**/*.test.js | tap-spec",
         "test:unit": "vue-cli-service test:unit",
         "lint": "eslint src --ignore-pattern node_modules --fix",
         "style": "npx tailwindcss-cli@latest build src/assets/styles/styles.css -o public/styles.css"
+
     },
     "dependencies": {},
     "devDependencies": {
@@ -24,7 +26,6 @@
         "@vue/cli-service": "^4.5.9",
         "@vue/composition-api": "^1.0.0-beta.22",
         "@vue/test-utils": "1.1.2",
-        "axios": "^0.21.1",
         "babel-eslint": "^10.1.0",
         "chai": "^4.2.0",
         "core-js": "^3.8.1",

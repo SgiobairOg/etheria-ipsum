@@ -22,7 +22,6 @@
 
 <script>
   import { ref, reactive } from "@vue/composition-api"
-  import axios from "axios"
 
   export default {
     name: 'Generator',
@@ -59,8 +58,7 @@
         stats.ready = false
         const api = `./dialog/${contentType}/${count}`
 
-        axios
-          .get(api)
+        fetch(api)
           .then(
             ( result ) => {
               updateStats(result.data.words, result.data.characters, result.data.charactersExcludingSpaces)
