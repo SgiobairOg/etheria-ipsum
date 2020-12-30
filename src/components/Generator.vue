@@ -56,6 +56,7 @@
 
       function retriveDialogData( contentType, count) {
         stats.ready = false
+        dialogContent.value = ''
         const api = `./dialog/${contentType}/${count}`
 
         fetch(api)
