@@ -59,10 +59,11 @@
         const api = `./dialog/${contentType}/${count}`
 
         fetch(api)
+          .then( response => response.json() )
           .then(
             ( result ) => {
-              updateStats(result.data.words, result.data.characters, result.data.charactersExcludingSpaces)
-              updateDialog(result.data.dialog)
+              updateStats(result.words, result.characters, result.charactersExcludingSpaces)
+              updateDialog(result.dialog)
             },
             ( error ) => { throw new Error(error) })
       }
