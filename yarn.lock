@@ -45,12 +45,17 @@
     "@architect/parser" "~3.0.0"
     run-series "~1.1.9"
 
+"@architect/parser@^2.1.5":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@architect/parser/-/parser-2.3.0.tgz#ba4e9c6df6332e4ae6117be4f7d17a476fe70d24"
+  integrity sha512-5VnJNg4O49QSAW2hYPpG0pkgwBF5xGzQTn2fiNifztCynLrGNgyaloFrn1eVMIGDjq85+x6a5jai+zKN+dKUSA==
+
 "@architect/parser@~3.0.0", "@architect/parser@~3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@architect/parser/-/parser-3.0.1.tgz#cb3cb62b1289cc8ab1f46cc9d2222c6fe0496664"
   integrity sha512-mXn5Ha5a3tEOV5vkGHLdrDinSRfO8g9s72gKuOWA13HJtGcfI+jkYrEdQbLqe63gz0RPQN27h0e1IKc2kSzqHw==
 
-"@architect/sandbox@^3.3.3":
+"@architect/sandbox@^3.3":
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/@architect/sandbox/-/sandbox-3.3.3.tgz#932e1199e99d3e84cc355850f9c66123f8da1535"
   integrity sha512-n4CrgSnlxIsxMCkf2dfT20wiR5+q9vv1gJYocYflywbT9PHoSAL41j46G7V0hjcmzwq4lyDBUM7gRUXbhOuL3g==
@@ -946,7 +951,17 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@begin/hashid@~1.0.0":
+"@begin/data@latest":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@begin/data/-/data-1.2.3.tgz#d4eff3c0583c45cebc55d2c9a6756c8332029391"
+  integrity sha512-C6ITWRCbef2H2pIZ+PtYTES2d6gvhDnkhqg0rXW6FL1recjfASGpFtOcaohZ0vHuKxyFTSDnS1j3lAeC7AaCdg==
+  dependencies:
+    "@architect/parser" "^2.1.5"
+    "@begin/hashid" "^1.0.0"
+    run-parallel "^1.1.9"
+    run-waterfall "^1.1.6"
+
+"@begin/hashid@^1.0.0", "@begin/hashid@~1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@begin/hashid/-/hashid-1.0.0.tgz#e3e3f9698423cdd74855f99b2411ed50ed6cf041"
   integrity sha512-w+U9klEtRkt7hyW/f+/SvwPgJ4CTMO2ENddisX9dGgLUZKu+iKpb/IhYnQWIt9/Nnm/5DkApmiHGimPs621wwA==
@@ -8687,7 +8702,7 @@ run-series@~1.1.9:
   resolved "https://registry.yarnpkg.com/run-series/-/run-series-1.1.9.tgz#15ba9cb90e6a6c054e67c98e1dc063df0ecc113a"
   integrity sha512-Arc4hUN896vjkqCYrUXquBFtRZdv1PfLbTYP71efP6butxyQ0kWpiNJyAgsxscmQg1cqvHY32/UCBzXedTpU2g==
 
-run-waterfall@~1.1.7:
+run-waterfall@^1.1.6, run-waterfall@~1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/run-waterfall/-/run-waterfall-1.1.7.tgz#ae368b549b2f5171f86c2924492cab3352a6e9c5"
   integrity sha512-iFPgh7SatHXOG1ClcpdwHI63geV3Hc/iL6crGSyBlH2PY7Rm/za+zoKz6FfY/Qlw5K7JwSol8pseO8fN6CMhhQ==
@@ -9657,7 +9672,7 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
-tiny-json-http@^7.2.2:
+tiny-json-http@^7.3.0:
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/tiny-json-http/-/tiny-json-http-7.3.0.tgz#26094cba45141b9e06c7cb0d850f5b0779062459"
   integrity sha512-dZrf9ZGZQhe8QhhPN3o4uDCQuBc3Gaq4CtbU/67hQDWXuvjLI1mayr8AOFSiUGa3F818SpIgUnC3mM673VRHGQ==
