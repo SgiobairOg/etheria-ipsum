@@ -18,17 +18,23 @@ exports.handler = async function http (req) {
   const targetWordCountInt = parseInt(req.pathParameters.count)
 
   if(!targetWordCountInt || isNaN(targetWordCountInt) || targetWordCountInt < 1) {
-    reply.code(400)
-    return { error: `Word count is required to be a positive integer value. For example '../words/42'`}
+    return {
+      statusCode: 400,
+      headers: {
+        'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
+        'content-type': 'text/html; charset=utf8'
+      },
+      body: JSON.stringify({ error: `Word count is required to be a positive integer value. For example '../words/42'`})
+    }
   }
 
   do {
     let currentLine
     const remainingWordCount = targetWordCountInt - result.words
-    if (dialogData.wordLengthIndex[remainingWordCount]) { 
+    if (dialogData.wordLengthIndex[remainingWordCount]) {
       currentLine = randomItem(dialogData.wordLengthIndex[remainingWordCount])
     } else {
-      currentLine = randomItem(dialogData.lines.filter(line => line.content.length <= remainingWordCount)) 
+      currentLine = randomItem(dialogData.lines.filter(line => line.content.length <= remainingWordCount))
     }
 
     result.dialog += currentLine.content + ' '

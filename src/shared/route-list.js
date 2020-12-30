@@ -16,7 +16,7 @@ const routeList = ( root ) => {
       "words": {
         "rel": "latest-version",
         "href": `${root}/dialog/words/{count}`
-      } 
+      }
     }
   }
 }

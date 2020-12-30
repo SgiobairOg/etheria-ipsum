@@ -30,7 +30,7 @@ exports.handler = async function http (req) {
   do {
     let currentLine
     const remainingCharacterCount = targetCharacterCountInt - 1 - result.characters
-    if (dialogData.characterLengthIndex[remainingCharacterCount]) { 
+    if (dialogData.characterLengthIndex[remainingCharacterCount]) {
       currentLine = randomItem(dialogData.characterLengthIndex[remainingCharacterCount])
     } else {
       currentLine = randomItem(dialogData.lines)
@@ -41,7 +41,7 @@ exports.handler = async function http (req) {
     result.characters += 1 + currentLine.characters
     result.charactersExcludingSpaces += currentLine.charactersExcludingSpaces
   } while ( targetCharacterCountInt > result.characters )
-  
+
   return {
     statusCode: 200,
     headers: {
