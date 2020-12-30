@@ -45,11 +45,6 @@
     "@architect/parser" "~3.0.0"
     run-series "~1.1.9"
 
-"@architect/parser@^2.1.5":
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/@architect/parser/-/parser-2.3.0.tgz#ba4e9c6df6332e4ae6117be4f7d17a476fe70d24"
-  integrity sha512-5VnJNg4O49QSAW2hYPpG0pkgwBF5xGzQTn2fiNifztCynLrGNgyaloFrn1eVMIGDjq85+x6a5jai+zKN+dKUSA==
-
 "@architect/parser@~3.0.0", "@architect/parser@~3.0.1":
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/@architect/parser/-/parser-3.0.1.tgz#cb3cb62b1289cc8ab1f46cc9d2222c6fe0496664"
@@ -951,17 +946,7 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@begin/data@^1.2.3":
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/@begin/data/-/data-1.2.3.tgz#d4eff3c0583c45cebc55d2c9a6756c8332029391"
-  integrity sha512-C6ITWRCbef2H2pIZ+PtYTES2d6gvhDnkhqg0rXW6FL1recjfASGpFtOcaohZ0vHuKxyFTSDnS1j3lAeC7AaCdg==
-  dependencies:
-    "@architect/parser" "^2.1.5"
-    "@begin/hashid" "^1.0.0"
-    run-parallel "^1.1.9"
-    run-waterfall "^1.1.6"
-
-"@begin/hashid@^1.0.0", "@begin/hashid@~1.0.0":
+"@begin/hashid@~1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@begin/hashid/-/hashid-1.0.0.tgz#e3e3f9698423cdd74855f99b2411ed50ed6cf041"
   integrity sha512-w+U9klEtRkt7hyW/f+/SvwPgJ4CTMO2ENddisX9dGgLUZKu+iKpb/IhYnQWIt9/Nnm/5DkApmiHGimPs621wwA==
@@ -2105,18 +2090,6 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
-
-autoprefixer@^10.1.0:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.1.0.tgz#b19fd8524edef8c85c9db3bdb0c998de84e172fb"
-  integrity sha512-0/lBNwN+ZUnb5su18NZo5MBIjDaq6boQKZcxwy86Gip/CmXA2zZqUoFQLCNAGI5P25ZWSP2RWdhDJ8osfKEjoQ==
-  dependencies:
-    browserslist "^4.15.0"
-    caniuse-lite "^1.0.30001165"
-    colorette "^1.2.1"
-    fraction.js "^4.0.12"
-    normalize-range "^0.1.2"
-    postcss-value-parser "^4.1.0"
 
 autoprefixer@^9.8.6:
   version "9.8.6"
@@ -4731,11 +4704,6 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
-
-fraction.js@^4.0.12:
-  version "4.0.13"
-  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.0.13.tgz#3c1c315fa16b35c85fffa95725a36fa729c69dfe"
-  integrity sha512-E1fz2Xs9ltlUp+qbiyx9wmt2n9dRzPsS11Jtdb8D2o+cC7wr9xkkKsVKJuBX0ST+LVS+LhLO+SbLJNtfWcJvXA==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -8060,7 +8028,7 @@ postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.27, postcss@^7.0.3
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.2:
+postcss@^8.1.6, postcss@^8.2.1:
   version "8.2.2"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.2.tgz#60613b62297005084fd21024a68637798864fe26"
   integrity sha512-HM1NDNWLgglJPQQMNwvLxgH2KcrKZklKLi/xXYIOaqQB57p/pDWEJNS83PVICYsn1Dg/9C26TiejNr422/ePaQ==
@@ -8726,7 +8694,7 @@ run-series@~1.1.9:
   resolved "https://registry.yarnpkg.com/run-series/-/run-series-1.1.9.tgz#15ba9cb90e6a6c054e67c98e1dc063df0ecc113a"
   integrity sha512-Arc4hUN896vjkqCYrUXquBFtRZdv1PfLbTYP71efP6butxyQ0kWpiNJyAgsxscmQg1cqvHY32/UCBzXedTpU2g==
 
-run-waterfall@^1.1.6, run-waterfall@~1.1.7:
+run-waterfall@~1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/run-waterfall/-/run-waterfall-1.1.7.tgz#ae368b549b2f5171f86c2924492cab3352a6e9c5"
   integrity sha512-iFPgh7SatHXOG1ClcpdwHI63geV3Hc/iL6crGSyBlH2PY7Rm/za+zoKz6FfY/Qlw5K7JwSol8pseO8fN6CMhhQ==
