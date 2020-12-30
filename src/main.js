@@ -1,5 +1,3 @@
-import '@/assets/styles.css'
-
 import App from './App'
 import Vue from 'vue'
 import VueCompositionApi from "@vue/composition-api"
