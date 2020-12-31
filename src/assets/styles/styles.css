@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Shera';
   src: 
-    url('./fonts/Shera.woff') format('woff'),
-    url('./fonts/Shera.ttf') format('truetype')
+    url('./../fonts/Shera.woff') format('woff'),
+    url('./../fonts/Shera.ttf') format('truetype')
 }
 
 @tailwind base;
 @tailwind components;
 
 .btn-container {
-  position: absolute;
+  position: fixed;
   bottom: .5rem;
   right: .5rem;
 }
