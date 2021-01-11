@@ -1,8 +1,10 @@
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P116QM3)
-
 # Etheria Ipsum
 
 Lorem Ipsum generator based on the dialog from the TV show She-Ra and the Princesses of Power, and associated tools for building/maintaining the dialog. As this is using the dialog from many of the episodes from the TV series please expect spoilers. If you haven't seen She-Ra, please go watch She-Ra.
+
+If you get some joy or use out of this little project, please consider supporting me on Ko-fi.
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P116QM3)
 
 ## Packages
 
