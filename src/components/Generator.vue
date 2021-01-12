@@ -3,8 +3,8 @@
     <div class="mx-auto">
       <label class="flex justify-center items-center">
         <input v-model="count" type="number" min="1" step="1" class="form-input block w-24 text-purple-darkest" placeholder="52">
-        <button @click="getWords" class="block px-4 py-2 border-l-2 text-base dark:text-purple-darkest bg-purple-darker dark:bg-purple dark:border-purple-darkest">Words</button>
-        <button @click="getCharacters" class="block px-4 py-2 border-l-2 text-base dark:text-purple-darkest  bg-purple-darker dark:bg-purple dark:border-purple-darkest rounded-md rounded-l-none">Characters</button>
+        <button @click="getWords" class="block font-semibold px-4 py-2 border-l-2 text-base dark:text-purple-darkest bg-purple-darker dark:bg-purple dark:border-purple-darkest">Words</button>
+        <button @click="getCharacters" class="block font-semibold px-4 py-2 border-l-2 text-base dark:text-purple-darkest  bg-purple-darker dark:bg-purple dark:border-purple-darkest rounded-md rounded-l-none">Characters</button>
       </label>
     </div>
     <div id="stats" class="text-purple-darker dark:text-base">
