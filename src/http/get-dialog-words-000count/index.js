@@ -12,7 +12,7 @@ exports.handler = async function http (req) {
     words: 0,
     characters: 0,
     charactersExcludingSpaces: 0,
-    paragraphs: 1,
+    paragraphs: 0,
     self: req.url,
     ...routeList(ROOT),
   }
@@ -55,6 +55,8 @@ exports.handler = async function http (req) {
       lineCount = 0
     }
   } while ( targetWordCountInt > result.words )
+
+  result.paragraphs += 1
 
   result.dialog.trim()
   result.dialog = result.dialog.split(PARAGRAPH_BREAK)
