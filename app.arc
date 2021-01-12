@@ -3,7 +3,6 @@ etheria-ipsum
 
 @static
 folder dist
-fingerprint true
 
 @http
 get /dialog
