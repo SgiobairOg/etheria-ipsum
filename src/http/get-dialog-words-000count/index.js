@@ -16,7 +16,6 @@ exports.handler = async function http (req) {
     self: req.url,
     ...routeList(ROOT),
   }
-  console.log(result)
   const targetWordCountInt = parseInt(req.pathParameters.count)
 
   if(!targetWordCountInt || isNaN(targetWordCountInt) || targetWordCountInt < 1) {
