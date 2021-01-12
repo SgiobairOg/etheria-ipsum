@@ -33,6 +33,14 @@ exports.handler = async function http (req) {
 
   do {
     let currentLine
+
+    if(lineCount === randomItem([5,6,7,8]) || lineCount >= 8) {
+      result.dialog += PARAGRAPH_BREAK
+      result.characters -= PARAGRAPH_BREAK.length
+      result.paragraphs += 1
+      lineCount = 0
+    }
+
     const remainingCharacterCount = targetCharacterCountInt - 1 - result.characters
     if (dialogData.characterLengthIndex[remainingCharacterCount]) {
       currentLine = randomItem(dialogData.characterLengthIndex[remainingCharacterCount])
@@ -47,12 +55,6 @@ exports.handler = async function http (req) {
 
     lineCount += 1
 
-    if(lineCount === randomItem([5,6,7,8]) || lineCount >= 8) {
-      result.dialog += PARAGRAPH_BREAK
-      result.characters += 1
-      result.paragraphs += 1
-      lineCount = 0
-    }
   } while ( targetCharacterCountInt > result.characters )
 
   result.paragraphs += 1
