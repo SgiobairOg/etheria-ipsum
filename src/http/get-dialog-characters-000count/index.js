@@ -29,7 +29,7 @@ exports.handler = async function http (req) {
     }
   }
 
-  let lineCount
+  let lineCount = 0
 
   do {
     let currentLine
